@@ -1,0 +1,48 @@
+/* assessment.component.css */
+.assessment-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.assessment-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.assessment-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.question-text {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.answer-option {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/* Custom button styles */
+.submit-button {
+  margin-top: 20px;
+  padding: 12px 30px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}

@@ -4,6 +4,7 @@ FROM node:14 as build
 # Set the working directory to the root of the Angular app
 WORKDIR /app
 
+
 # Copy package.json and package-lock.json
 COPY package*.json ./
 

@@ -16,6 +16,8 @@
     "pg": "^8.11.2",
     "sequelize": "^6.32.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@angular/cli": "^16.1.7"
+  },
   "description": ""
 }

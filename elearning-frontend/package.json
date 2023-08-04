@@ -1,6 +1,9 @@
 {
   "name": "elearning-frontend",
   "version": "1.0.0",
+  "engines": {
+    "node": ">=18 <19"
+  },
   "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.7.",
   "main": "index.js",
   "scripts": {

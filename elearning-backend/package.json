@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -18,7 +19,8 @@
     "sequelize": "^6.32.1"
   },
   "devDependencies": {
-    "@angular/cli": "^16.1.7"
+    "@angular/cli": "^16.1.7",
+    "typescript": "^5.1.6"
   },
   "description": ""
 }

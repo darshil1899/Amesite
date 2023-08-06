@@ -1,17 +1,18 @@
 const express = require("express");
 const router = express.Router();
-const Grade = require("../models/Grade");
+const Grade = require("../models/grades");
+const gradesController = require("../controllers/gradesController");
 
 // Route to store the learner's grade data
-router.post("/", async (req, res) => {
+router.post("/store-grade", async (req, res) => {
   try {
     // Assuming you receive the learner's ID, assessment ID, and grade in the request body
-    const { learnerId, assessmentId, grade } = req.body;
+    const { user_id, assessment_id, grade } = req.body;
 
     // Store the grade data in the PostgreSQL database
     const savedGrade = await Grade.create({
-      learnerId: learnerId,
-      assessmentId: assessmentId,
+      user_id: user_id,
+      assessment_id: assessment_id,
       grade: grade,
     });
 
@@ -23,10 +24,10 @@ router.post("/", async (req, res) => {
 });
 
 // Route to get all grades for a specific learner
-router.get("/learner/:learnerId", async (req, res) => {
+router.get("/get-grades/:learnerId", async (req, res) => {
   try {
     const learnerId = req.params.learnerId;
-    const grades = await Grade.findAll({ where: { learnerId } });
+    const grades = await Grade.findAll({ where: { user_id: learnerId } });
 
     // Respond with the grades data (optional)
     res.status(200).json(grades);

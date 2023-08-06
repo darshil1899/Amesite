@@ -1,4 +1,6 @@
 const axios = require("axios");
+const Grade = require("../models/grades"); // Import the Grade model
+const grades = require("./models/grades");
 
 const moodleBaseUrl = "https://your-moodle-site-url"; // Replace with your Moodle site URL
 
@@ -22,6 +24,14 @@ async function pushGradeToMoodle(learnerId, assessmentId, grade) {
       `${moodleBaseUrl}/webservice/rest/server.php`,
       data
     );
+
+    // Assuming the grade is successfully pushed to Moodle, also save it in your PostgreSQL database
+    const savedGrade = await grades.create({
+      user_id: learnerId,
+      assessment_id: assessmentId,
+      grade: grade,
+    });
+
     return response.data;
   } catch (error) {
     throw new Error("Failed to push grade data to Moodle");

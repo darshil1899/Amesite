@@ -1,4 +1,3 @@
-
 # eLearning Application
 
 The eLearning application is a platform that allows learners to take assessments and pushes their grade data to Moodle. This README provides detailed instructions on how to set up and run the application.
